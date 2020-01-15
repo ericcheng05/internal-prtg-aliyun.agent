@@ -9,7 +9,9 @@ public class StringUtil
 {
 	public static enum AliyunProduct
 	{
-		ECS, RDS, SLB, OSS, Memcache, EIP, Redis, MessageService, CDN, AnalyticDB, MongoDB, ExpressConnect, FunctionCompute, NATGateway, LogService, ContainerService, VPN, SharedBandwidthPackage, CEN, EdgeNodeService, OpenSearch 
+		ECS, RDS, SLB, OSS, Memcache, EIP, Redis, MessageService, CDN, AnalyticDB, MongoDB,
+		ExpressConnect, FunctionCompute, NATGateway, LogService, ContainerService, VPNGateway,
+		SharedBandwidthPackage, CEN, EdgeNodeService, OpenSearch, SecureAcceleration, GlobalAcceleration 
 	}
 	
 	public static enum StatisticType
@@ -118,7 +120,7 @@ public class StringUtil
 		}
 		else if (project.equals("acs_vpn"))
 		{
-			product = AliyunProduct.VPN;
+			product = AliyunProduct.VPNGateway;
 		}
 		else if (project.equals("acs_bandwidth_package"))
 		{
@@ -136,11 +138,19 @@ public class StringUtil
 		{
 			product = AliyunProduct.OpenSearch;
 		}
+		else if (project.equals("acs_scdn"))
+		{
+			product = AliyunProduct.SecureAcceleration;
+		}
+		else if (project.equals("acs_global_acceleration"))
+		{
+			product = AliyunProduct.GlobalAcceleration;
+		}
 		else
 		{
 			return null;
 		}
 		
-		return product;		
+		return product;
 	}
 }
