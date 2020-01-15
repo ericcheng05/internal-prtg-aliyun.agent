@@ -11,15 +11,7 @@ PRTG Adapter for Alibaba Cloud / Aliyun Cloud Monitor
 
 ### Deployment
 
-
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Use PRTG EXE/Script Sensor
 
 ## Configuration
 
