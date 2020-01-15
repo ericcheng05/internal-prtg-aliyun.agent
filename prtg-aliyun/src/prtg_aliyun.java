@@ -1,12 +1,9 @@
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
-import java.util.SimpleTimeZone;
 import java.util.UUID;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,8 +13,8 @@ import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.methods.GetMethod;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
+// import org.springframework.http.HttpHeaders;
+// import org.springframework.http.MediaType;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
