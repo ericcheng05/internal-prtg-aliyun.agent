@@ -33,7 +33,7 @@ import util.UrlUtil;
  * @author Eric
  * 
  */
-public class PRTG_CloudMonitor
+public class prtg_aliyun
 {
 	private final static boolean debug = false;
 	
