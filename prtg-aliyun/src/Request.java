@@ -36,6 +36,10 @@ public class Request
 		{
 			this.setDimensions("{\"instanceId\":\"" + args[6] + "\",\"" + args[7] + "\":\"" + args[8] + "\",\"" + args[9] + "\":\"" + args[10] + "\"}");				
 		}
+		else if (args.length == 13)
+		{
+			this.setDimensions("{\"instanceId\":\"" + args[6] + "\",\"" + args[7] + "\":\"" + args[8] + "\",\"" + args[9] + "\":\"" + args[10] + "\",\"" + args[11] + "\":\"" + args[12] + "\"}");				
+		}
 		
 		this.setProduct(StringUtil.parseProduct(this.getProject()));
 	}

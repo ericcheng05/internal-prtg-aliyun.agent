@@ -11,7 +11,7 @@ public class StringUtil
 	{
 		ECS, RDS, SLB, OSS, Memcache, EIP, Redis, MessageService, CDN, AnalyticDB, MongoDB,
 		ExpressConnect, FunctionCompute, NATGateway, LogService, ContainerService, VPNGateway,
-		SharedBandwidthPackage, CEN, EdgeNodeService, OpenSearch, SecureAcceleration, GlobalAcceleration 
+		SharedBandwidthPackage, CEN, EdgeNodeService, OpenSearch, SecureAcceleration, GlobalAcceleration, PhysicalConnection 
 	}
 	
 	public static enum StatisticType
@@ -145,6 +145,10 @@ public class StringUtil
 		else if (project.equals("acs_global_acceleration"))
 		{
 			product = AliyunProduct.GlobalAcceleration;
+		}
+		else if (project.equals("acs_physical_connection"))
+		{
+			product = AliyunProduct.PhysicalConnection;
 		}
 		else
 		{

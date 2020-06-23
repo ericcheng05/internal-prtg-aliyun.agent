@@ -32,7 +32,7 @@ import util.UrlUtil;
  */
 public class prtg_aliyun
 {
-	private final static boolean debug = false;
+	private final static boolean debug = true;
 	
 	private final static String SIGNATURE_VERSION = "1.0";
 	private final static String defaultSignatureType = "HMAC-SHA1";
@@ -63,7 +63,7 @@ public class prtg_aliyun
 		
 		Request request = null;
 		
-		if (args.length != 7 && args.length != 9 && args.length != 11)
+		if (args.length != 7 && args.length != 9 && args.length != 11 && args.length != 13)
 		{
 			result = "<prtg><error>1</error><text>Not Enough Parameters or Incorrect Arguments Format</text></prtg>";			
 			System.out.println(result);
