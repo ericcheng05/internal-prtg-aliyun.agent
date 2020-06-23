@@ -30,8 +30,13 @@ The Application takes 7 / 9 / 11 Arguments in Following Order:
 9. Additional Dimension Value
 10. Additional Dimension Name
 11. Additional Dimension Value
+12. Additional Dimension Name
+13. Additional Dimension Value
 
 ## Version
+
+### Build Version 2.5.2
+Add Physical Connection (VBR) in Preset Metric, Add Argument Space for Possible 4 Dimension Use Case
 
 ### Build Version 2.5.1
 Add Secure Acceleration and Global Acceleration in Preset Metric
