@@ -32,16 +32,14 @@ import util.UrlUtil;
  */
 public class prtg_aliyun
 {
-	private final static boolean debug = true;
+	private final static boolean debug = false;
 	
-	private final static String SIGNATURE_VERSION = "1.0";
+	private final static String defaultSignatureVersion = "1.0";
 	private final static String defaultSignatureType = "HMAC-SHA1";
-	private final static String API_Format = "XML";
-	private final static String API_VERSION = "2017-03-01";
-	private final static String domainnew = "metrics.aliyuncs.com";
-	protected String domain = "metrics.aliyuncs.com";
-
-	// protected String domain = "alert.aliyuncs.com";
+	private final static String apiFortmat = "XML";
+	private final static String apiVersion = "2017-03-01";
+	private final static String apiDomain = "metrics.aliyuncs.com";
+	
 /*
 	protected HttpHeaders buildHttpHeaders(String sessionId)
 	{
@@ -91,14 +89,14 @@ public class prtg_aliyun
 		// Note the dimension format!
 		parameters.put("Dimensions", request.getDimensions());
 		parameters.put("AccessKeyId", request.getAccessKeyId());
-		parameters.put("Format", API_Format);
+		parameters.put("Format", apiFortmat);
 		parameters.put("SignatureMethod", defaultSignatureType);
 		parameters.put("SignatureNonce", UUID.randomUUID().toString());
-		parameters.put("SignatureVersion", SIGNATURE_VERSION);
-		parameters.put("Version", API_VERSION);
+		parameters.put("SignatureVersion", defaultSignatureVersion);
+		parameters.put("Version", apiVersion);
 		parameters.put("Timestamp", StringUtil.formatISO8601Date(new Date()));
 		
-		String url = "http://" + domainnew;
+		String url = "http://" + apiDomain;
 		if (!url.endsWith("/"))
 		{
 			url += "/";
@@ -149,7 +147,7 @@ public class prtg_aliyun
 	        		System.out.println(result);
 	        		return;
 	        	case 500:
-	        		result = "<prtg><error>1</error><text>Error Code: " + statusCode + " Server Error (Cannot Connect to " + domainnew + ")</text></prtg>";
+	        		result = "<prtg><error>1</error><text>Error Code: " + statusCode + " Server Error (Cannot Connect to " + apiDomain + ")</text></prtg>";
 	        		System.out.println(result);
 	        		return;
 	        	default:
