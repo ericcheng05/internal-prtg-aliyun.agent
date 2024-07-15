@@ -9,7 +9,7 @@ public class StringUtil
 {
 	public static enum AliyunProduct
 	{
-		ECS, RDS, SLB, OSS, Memcache, EIP, Redis, MessageService, CDN, AnalyticDB, MongoDB,
+		ECS, RDS, SLB, OSS, NAS, Memcache, EIP, Redis, MessageService, CDN, AnalyticDB, MongoDB,
 		ExpressConnect, FunctionCompute, NATGateway, LogService, ContainerService, VPNGateway,
 		SharedBandwidthPackage, CEN, EdgeNodeService, OpenSearch, SecureAcceleration, GlobalAcceleration, PhysicalConnection 
 	}
@@ -69,6 +69,10 @@ public class StringUtil
 		else if (project.equals("acs_oss"))
 		{
 			product = AliyunProduct.OSS;
+		}
+		else if (project.equals("acs_nas"))
+		{
+			product = AliyunProduct.NAS;
 		}
 		else if (project.equals("acs_memcache"))
 		{
